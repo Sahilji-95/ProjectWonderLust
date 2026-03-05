@@ -1,0 +1,102 @@
+<% layout("/layouts/boilerPlate.ejs")%>
+<body>
+  <div class="row mt-3">
+    <div class="col-8 offset-2">
+      <br />
+
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Edit your listing</h5>
+        </div>
+        <div class="card-header">Id -> <%= detail._id%></div>
+      </div>
+
+      <form
+        method="POST"
+        action="/listings/<%=detail._id%>?_method=PUT"
+        class="needs-validation"
+        novalidate
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="title" class="form-label"> Title</label>
+          <input
+            type="text"
+            name="listing[title]"
+            id=""
+            class="form-control"
+            value="<%=detail.title%>"
+            required
+          />
+          <div class="invalid-feedback">Please Enter a Titel.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="descriptions" class="form-label">Descriptions</label>
+          <input
+            type="text"
+            name="listing[description]"
+            id=""
+            value="<%=detail.description%>"
+            class="form-control"
+            required
+          />
+          <div class="invalid-feedback">Provide a short description.</div>
+        </div>
+
+        <div class="mb-3">
+          Original image <br />
+          <img src="<%=originalImageUrl%>" />
+        </div>
+
+        <div class="mb-3">
+          <label for="image" class="form-label">Upload New Image</label>
+          <input type="file" class="form-control" name="listing[image]" />
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label"> Price</label>
+            <input
+              type="text"
+              class="form-control"
+              name="listing[price]"
+              id=""
+              value="<%=detail.price%>"
+              required
+            />
+            <div class="invalid-feedback">Please fill the black.</div>
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country</label>
+            <input
+              type="text"
+              name="listing[country]"
+              id=""
+              class="form-control"
+              value="<%=detail.country%>"
+              required
+            />
+            <div class="invalid-feedback">Please fill the black.</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            name="listing[location]"
+            id=""
+            class="form-control"
+            value="<%=detail.location%>"
+            required
+          />
+          <div class="invalid-feedback">Please fill the black.</div>
+        </div>
+
+        <button class="btn btn-dark add-btn mt-3 mb-3">Update</button>
+      </form>
+    </div>
+  </div>
+</body>
