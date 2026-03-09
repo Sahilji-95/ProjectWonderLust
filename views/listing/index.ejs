@@ -28,12 +28,20 @@
      justify-content: center;
      align-items: center;
   }
+   @media (max-width: 400px) {
+    .filter {
+      display: none;
+    }
+    .tax-toggel{
+      display: none;
+    }
+  }
 
 </style>
 
 
 <body>
-<div id="filters">
+<div id="filters" class="filter">
     <div class="filter">
       <div><i class="fa-solid fa-fire"></i></div>
       <p>Trending</p>

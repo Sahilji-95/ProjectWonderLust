@@ -1,6 +1,19 @@
 <% layout("/layouts/boilerPlate.ejs")%>
+<style>
+  @media (max-width: 767px) {
+
+  .size .col-6 {
+    width: 100% !important;
+  }
+
+  .size .offset-3 {
+    margin-left: 0 !important;
+  }
+
+}
+</style>
   <body>
-    <div class="row">
+    <div class="row size">
       <div class="col-6 offset-3 mt-3">
         <h3><%= listing.title %></h3>
       

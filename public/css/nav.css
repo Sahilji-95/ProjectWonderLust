@@ -1,0 +1,23 @@
+.btn-search {
+  background-color: #fe424d;
+  color: white;
+  border-radius: 25px;
+  padding: 0 1rem;
+}
+.btn-search:hover {
+  background-color: #fe424d;
+  color: white;
+}
+.search-input {
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 770px) {
+  .searchBox {
+    display: none;
+  }
+}
+.navbar-collapse.show {
+  background-color: white;
+  padding: 1rem;
+}

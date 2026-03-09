@@ -1,6 +1,6 @@
-body {
+/* body {
   background: #eee7e7;
-}
+} */
 
 .hero-section {
   height: 80vh;
@@ -78,4 +78,34 @@ body {
 .more-btn:hover {
   background: black;
   color: white;
+}
+
+@media (max-width: 400px) {
+  .cardss {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .cardss .col-md-6 {
+    min-width: 250px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (min-width: 767px) {
+  .cardss {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+  }
+
+  .cardss .col-md-6 {
+    min-width: 250px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 }
